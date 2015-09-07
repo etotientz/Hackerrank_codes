@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main(){
+ll t,n,h,i;
+cin>>t;
+while(t--){
+cin>>n;h=1;
+for(i=1;i<=n;i++){
+    if(i%2==1)h=h*2;
+    else h+=1;
+}
+cout<<h<<endl;}}

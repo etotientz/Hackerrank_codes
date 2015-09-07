@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){long long int t,*p,n,i,k,sum,m;
+cin>>t;
+while(t--){m=0;
+cin>>n;sum=0;k=0;
+p=new long long int[n];
+for(i=0;i<n;i++){cin>>p[i];sum+=p[i];}
+if(n==1){cout<<"YES"<<endl;m=1;}
+for(i=1;i<n-1;i++)
+{
+k+=p[i-1];
+if(sum-k-p[i]==k){cout<<"YES"<<endl;m=1;break;
+}}
+if(m==0)cout<<"NO"<<endl;
+}
+}
