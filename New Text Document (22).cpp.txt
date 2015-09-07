@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+int main()
+{ll t,n,d,i,k;
+cin>>t;
+while(t--){i=0;
+cin>>n;cin>>k;
+while(n--){
+cin>>d;
+if(d<=0)i++;
+}
+if(i<k)cout<<"YES"<<endl;
+else cout<<"NO"<<endl;}}

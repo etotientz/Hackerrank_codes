@@ -1,0 +1,17 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {int i,j,n,k=-1,sum=0,sum1=0;
+cin>>n;
+int a[n][n];
+for(i=0;i<n;i++){for(j=0;j<n;j++){
+    cin>>a[i][j];}k++;sum+=a[i][i];sum1+=a[i][j-k-1];
+
+
+}cout<<abs(sum1-sum)<<endl;
+}
