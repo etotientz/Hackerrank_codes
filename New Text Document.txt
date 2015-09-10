@@ -1,18 +1,32 @@
 /*
-  Print elements of a linked list on console 
-  head pointer input could be NULL as well for empty list
-  Node is defined as 
-  struct Node
-  {
+   Reverse a doubly linked list, input list may also be empty
+   Node is defined as
+   struct Node
+   {
      int data;
-     struct Node *next;
-  }
+     Node *next;
+     Node *prev;
+   }
 */
-void Print(Node *head)
-{ Node *p=head;
-  while(p!=NULL){
-      cout<<p->data<<endl;
-      p=p->next;}
-  }
-  // This is a "method-only" submission. 
-  // You only need to complete this method. 
+Node* Reverse(Node* head)
+{  Node *temp = NULL;  
+     Node *current = head;
+      
+     /* swap next and prev for all nodes of 
+       doubly linked list */
+     while (current !=  NULL)
+     {
+       temp = current->prev;
+       current->prev = current->next;
+       current->next = temp;              
+       current = current->prev;
+     }      
+      
+     /* Before changing head, check for the cases like empty 
+        list and list with only one node */
+     if(temp != NULL )
+        head = temp->prev;
+    
+    return head; // Complete this function
+    // Do not write the main method. 
+}
